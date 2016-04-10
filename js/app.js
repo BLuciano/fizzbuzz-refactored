@@ -16,12 +16,27 @@ $(document).ready(function(){
 			$(".message").text("No decimals allowed. Please enter a WHOLE number");
 			return;
 		} else{
-			$(".message").text("FizzBuzzing " + count + "...");
+			$(".message").text("Please enter a WHOLE number below and watch the magic happen!!!");
 			fizzbuzz(count);
 		}
 	});
 });
 
 function fizzbuzz(count){
-	console.log("getting ready to fizzbuzz you!");
+	var curr = "";
+	$('.results').text("");
+	$('.results').append("FizzBuzzing " + count + "<br/>");
+	for(var i = 1; i <= count; i++){
+		if(!(i % 3)){ 
+			curr = "Fizz";
+		}
+		if(!(i % 5)){
+			curr += "Buzz";
+		}
+		if(!curr){
+			curr = i;
+		}
+		$('.results').append(curr + ", ");
+		curr = "";
+	}
 }
