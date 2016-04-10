@@ -10,3 +10,8 @@ button, input{
 input{
 	font-size: 1.25em;
 }
+
+.results{
+	padding: 0 2.5%;
+	line-height: 2em;
+}
